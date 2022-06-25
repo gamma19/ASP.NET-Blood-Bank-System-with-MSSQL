@@ -1,0 +1,44 @@
+﻿@model Final2.Models.Donor
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Donor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="dSsn" />
+            <div class="form-group">
+                <label asp-for="dGender" class="control-label"></label>
+                <input asp-for="dGender" class="form-control" />
+                <span asp-validation-for="dGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dName" class="control-label"></label>
+                <input asp-for="dName" class="form-control" />
+                <span asp-validation-for="dName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dLastName" class="control-label"></label>
+                <input asp-for="dLastName" class="form-control" />
+                <span asp-validation-for="dLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

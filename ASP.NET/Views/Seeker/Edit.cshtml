@@ -1,0 +1,44 @@
+﻿@model Final2.Models.Seeker
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Seeker</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="sSsn" />
+            <div class="form-group">
+                <label asp-for="sGender" class="control-label"></label>
+                <input asp-for="sGender" class="form-control" />
+                <span asp-validation-for="sGender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sName" class="control-label"></label>
+                <input asp-for="sName" class="form-control" />
+                <span asp-validation-for="sName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="sLastName" class="control-label"></label>
+                <input asp-for="sLastName" class="form-control" />
+                <span asp-validation-for="sLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

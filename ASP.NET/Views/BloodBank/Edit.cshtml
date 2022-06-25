@@ -1,0 +1,39 @@
+﻿@model Final2.Models.BloodBank
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>BloodBank</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="bbId" />
+            <div class="form-group">
+                <label asp-for="bbName" class="control-label"></label>
+                <input asp-for="bbName" class="form-control" />
+                <span asp-validation-for="bbName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bbAddress" class="control-label"></label>
+                <input asp-for="bbAddress" class="form-control" />
+                <span asp-validation-for="bbAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

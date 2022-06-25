@@ -1,0 +1,63 @@
+﻿@model Final2.Models.Blood
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Blood</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dSsn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dSsn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.hId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.hId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bbId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bbId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sSsn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sSsn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rhType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.rhType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bAmount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bAmount)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="bTubeid" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,60 @@
+﻿@model Final2.Models.Blood
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Blood</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dSsn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dSsn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.hId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.hId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bbId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bbId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sSsn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sSsn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.rhType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.rhType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.bAmount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.bAmount)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.bTubeid">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
